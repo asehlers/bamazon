@@ -1,0 +1,53 @@
+DROP DATABASE IF EXISTS bamazon;
+-- Creates the "bamazon" database --
+CREATE DATABASE bamazon;
+
+-- Makes it so all of the following code will affect bamazon --
+USE bamazon;
+
+-- Creates the table "people" within animals_db --
+CREATE TABLE products (
+  -- Creates a numeric column called "id" which will automatically increment its default value as we create new rows --
+  item_id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes a string column called "name" which cannot contain null --
+  product_name VARCHAR(50) NOT NULL,
+  -- Makes a boolean column called "has_pet" which cannot contain null --
+  department_name VARCHAR(30),
+  -- Makes a sting column called "pet_name" --
+  price INTEGER(10) NOT NULL,
+  -- Makes an numeric column called "pet_age" --
+  stock_quantity INTEGER(10) NOT NULL,
+  -- Sets id as this table's primary key which means all data contained within it will be unique --
+  PRIMARY KEY (item_id)
+);
+
+-- Inserts products into table-- 
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Processor", "Computer Parts", 200, 50);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Graphics Card", "Computer Parts", 300, 70);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Motherboard", "Computer Parts", 50, 100);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Printer", "Printers", 50, 50);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Printer Ink", "Printers", 20, 150);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Paper", "Printers", 3, 300);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("RAM", "Computer Parts", 100, 60);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("HDMI Cable", "Cables", 20, 200);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("USB Cable", "Cables", 10, 50);
+
+INSERT INTO products (product_name, department_name, price, stock_quantity)
+VALUES ("Displyport Cable", "Cables", 30, 100);

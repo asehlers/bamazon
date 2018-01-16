@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "basic db to simulate an amazon like service",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asehlers/bamazon.git"
+  },
+  "author": "andrew ehlers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asehlers/bamazon/issues"
+  },
+  "homepage": "https://github.com/asehlers/bamazon#readme",
+  "dependencies": {
+    "inquirer": "^5.0.0",
+    "mysql": "^2.15.0"
+  }
+}
