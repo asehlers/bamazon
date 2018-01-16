@@ -42,7 +42,7 @@ function readProducts()
 
 function updateTable(id, quantity)
 {
-  console.log(quantity);
+  // console.log(quantity);
   connection.query("UPDATE products SET ? WHERE ?",
   [
     {
@@ -60,7 +60,7 @@ function updateTable(id, quantity)
 
 function makePurchase(id, quantity)
 {
-  console.log("Making a purchase");
+  // console.log("Making a purchase");
   connection.query("SELECT * FROM products WHERE item_id="+id, function(err, res)
   {
     if (err) throw err;
@@ -71,7 +71,7 @@ function makePurchase(id, quantity)
     }
     else
     {
-      console.log("The price of your purchse is: $" + res[0].price*quantity);
+      console.log("The price of your purchse is: $" + res[0].price*parseFloat(quantity));
       var newQuantity = res[0].stock_quantity - quantity;
       updateTable(id, newQuantity);
     }

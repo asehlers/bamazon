@@ -23,9 +23,27 @@ function askForSale()
 	]).then(function(res)
 	{
 		bamazonDB.makePurchase(res.id, res.quantity);
-		setTimeout(bamazonDB.closeConnection, 5000);
+		setTimeout(buyAgain, 100);
 	});
 }
 
-
+function buyAgain()
+{
+	inquirer.prompt([
+			{
+				type: "confirm",
+				name: "exit",
+				message: "Would you like to make another purchase?"
+			}
+		]).then(function(res)
+		{
+			if(res.exit){
+				askForSale();
+			}
+			else
+			{
+				bamazonDB.closeConnection();
+			}
+		});
+}
 setTimeout(askForSale, 1100);
