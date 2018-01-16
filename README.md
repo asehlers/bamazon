@@ -12,3 +12,9 @@ This file is used to communicate with the backend using mysql npm package. First
 
 #####bamazonCustomer.js
 This file is responsible for handling customer interaction with inquirer and passing requests along to the back end. It has two functions: askForSale and buyAgain. Initially, readProducts is called to display possible products to the user. askForSale requests the purchase id and quantity the customer wishes and calls makePurchase of bamazon_requests. It then calls the buyAgain function to determine if the user wishes to make another purchase or if the connection to the database can be closed.
+
+![alt text](./demo01.png)	
+
+![alt text](./demo02.png)	
+
+The above images display the initial table creation and basic testing/functionality of the app. The app displays the 10 products available for customer purchase and asks the user to enter the ID then the quantity for purchase. Then the price is output and a query is sent to the customer to ask if they wish to purchase again. This is repeated a few times. The initial query demonstrates fucntionality and the following query shows the customer cannot exceed purchases. These iterations demonstrate the the program works correctly when purchasing products, attempting to purchaseing more products than exist, and when purchasing the last of the products. 
